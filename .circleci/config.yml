@@ -8,7 +8,7 @@ orbs:
 commands:
   notify_on_failure:
     steps:
-    - slacl/notify:
+    - slack/notify:
         event: fail
         channel: test
         template: basic_fail_1

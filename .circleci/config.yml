@@ -10,7 +10,9 @@ commands:
     steps:
     - slack/notify:
         event: fail
+        channel: circleci-test
         template: basic_fail_1
+
 jobs:
   build-frontend:
     docker:
@@ -118,6 +120,7 @@ jobs:
     steps:
       - slack/notify:
           event: pass
+          channel: circleci-test
           template: success_tagged_deployment_1
 
 workflows:

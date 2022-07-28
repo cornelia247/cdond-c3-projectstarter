@@ -308,7 +308,7 @@ jobs:
       - install_ansible
       - install_nodejs
       - add_ssh_keys:
-          fingerprints: ["d9:06:93:7c:dd:ac:25:bf:3d:f3:10:f5:5d:69:f6:67"]
+          fingerprints: ["0b:df:56:da:b2:b7:04:84:52:16:f4:eb:fa:7d:11:23"]
       - attach_workspace:
           at: ~/
       - restore_cache:
@@ -325,7 +325,6 @@ jobs:
             npm i
             npm run build
             cd ..
-            # Zip the directory
             tar -C backend -czvf artifact.tar.gz .
             cd .circleci/ansible
             echo "Contents  of the inventory.txt file is -------"

@@ -10,7 +10,7 @@ commands:
     steps:
     - slack/notify:
         event: fail
-        channel: circleci-test
+        channel: C03R9GQ6ML2
         template: basic_fail_1
 
 jobs:
@@ -120,7 +120,7 @@ jobs:
     steps:
       - slack/notify:
           event: pass
-          channel: circleci-test
+          channel: C03R9GQ6ML2
           template: success_tagged_deployment_1
 
 workflows:

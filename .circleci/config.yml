@@ -118,10 +118,10 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - slack/notify:
-          event: pass
-          channel: C03R9GQ6ML2
-          template: success_tagged_deployment_1
+    - slack/notify:
+        event: pass
+        channel: C03R9GQ6ML2
+        template: success_tagged_deployment_1
 
 workflows:
   default:

@@ -190,7 +190,7 @@ jobs:
           command: |
             yum -y install tar gzip jq git
       - run:
-          name: Ensure back-end infrastructure exists
+          name: Ensure back-end infrastructure exists again
           command: |
             aws cloudformation deploy \
               --template-file .circleci/files/backend.yml \
@@ -198,7 +198,7 @@ jobs:
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  \
               --tags project=udapeople 
       - run:
-          name: Ensure front-end infrastructure exist
+          name: Ensure front-end infrastructure exist again
           command: |
             aws cloudformation deploy \
               --template-file .circleci/files/frontend.yml \
@@ -206,7 +206,7 @@ jobs:
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  \
               --tags project=udapeople  
       - run:
-          name: Add back-end ip to ansible inventory
+          name: Add back-end ip to ansible inventorys
           command: |
             aws ec2 describe-instances \
               --query 'Reservations[*].Instances[*].PublicIpAddress' \

@@ -1,11 +1,11 @@
 ---
-- name: 'upgrade packages.'
+- name: upgrade packages
   become: yes
   apt:
     upgrade: yes
     update_cache: yes
     cache_valid_time: 86400
-- name: remove  dependencies
+- name: remove dependencies
   become: yes
   apt:
     autoremove: yes

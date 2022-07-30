@@ -279,7 +279,6 @@ jobs:
       - image: amazon/aws-cli
     steps:
       - checkout
-      - install_nodejs
       - run:
           name: Install dependencies
           command: |
